@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
+import pymysql
 
+pymysql.install_as_MySQLdb()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +22,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'primeraApp'
+    'primeraApp',
+    'segundaApp',
+    'terceraApp'
 ]
 
 MIDDLEWARE = [
@@ -57,11 +61,9 @@ WSGI_APPLICATION = 'GameStore.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gamestore',
+        'NAME': 'aaa',
         'USER' : 'root',
         'PASSWORD' : '',
-        'HOST' : 'localhost',
-        'PORT' : ''
     }
 }
 
